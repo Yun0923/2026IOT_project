@@ -1,0 +1,12 @@
+[Unit]
+Description=IoT Drink Alarm Flask Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/nyuns/iot_project/server.py
+WorkingDirectory=/home/nyuns/iot_project
+Restart=always
+User=nyuns
+
+[Install]
+WantedBy=multi-user.target
